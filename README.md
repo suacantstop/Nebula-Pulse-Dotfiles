@@ -1,6 +1,6 @@
-# Nebula Pulse Dotfiles
+# [suacantstop] / Nebula Pulse Dotfiles
 
-Конфигурация NixOS + Home Manager, подготовленная как конкурсный рэйсинг-проект с единой авторской темой **Nebula Pulse**.
+Конфигурация NixOS + Home Manager, подготовленная как конкурсный райс-проект с единой авторской темой **Nebula Pulse**.
 
 ## Концепт
 
@@ -36,8 +36,6 @@ Nebula Pulse - это холодная космическая база с ярк
 - GTK/Qt theme layer
 - NVF (Neovim), Firefox, Git, Rofi
 
-Тема сквозная: шрифты, цвета, иконки, терминалы, панель, лаунчер, WM и редактор.
-
 ## Скриншоты
 
 Папка со скриншотами: [home/contest/screenshots](/etc/nixos/home/contest/screenshots)
@@ -52,17 +50,33 @@ Nebula Pulse - это холодная космическая база с ярк
 - [contest-checklist.md](contest/attachments/contest-checklist.md)
 - [capture-showcase.sh](contest/scripts/capture-showcase.sh)
 
-## Применение
+## Установка
+
+- Абсолютно чистая Nix os
+- Юзернейм: `nixos` **(рекомендованно)**
+- Базовое понимание флейков Nix
 
 ```bash
-sudo nixos-rebuild switch --flake /etc/nixos#nixos
+# Install git
+> sudo nano /etc/nixos/configuration.nix
+
+# Add to systemPackages: git
+> sudo nixos-rebuild switch
+
+# Clone this repository
+> mkdir Pictures
+> git clone https://github.com/suacantstop/Nebula-Pulse-Dotfiles.git
+> cd Nebula-Pulse-Dotfiles/nixos
+
+# Copy configuration files
+> sudo rm -rf /etc/nixos/configuration.nix
+> sudo cp -a home/ img/ modules/ configuration.nix flake.lock flake.nix /etc/nixos
+
+# Rebuild
+> sudo nixos-rebuild switch --flake /etc/nixos#nixos
+
+# Reboot your system
+> reboot
 ```
 
-## Нюанс по скриншотам
 
-В репозиторий добавлены превью-изображения для структуры submission.
-Актуальные скриншоты рабочего стола можно снять скриптом:
-
-```bash
-bash /etc/nixos/home/contest/scripts/capture-showcase.sh
-```
