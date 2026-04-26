@@ -36,19 +36,6 @@ Nebula Pulse - это холодная космическая база с ярк
 - GTK/Qt theme layer
 - NVF (Neovim), Firefox, Git, Rofi
 
-## Скриншоты
-
-Папка со скриншотами: [home/contest/screenshots](/etc/nixos/home/contest/screenshots)
-
-![Wallpaper base](contest/screenshots/01-wallpaper-base.jpg)
-![Workspace preview](contest/screenshots/02-workspace-preview.jpg)
-![Terminal preview](contest/screenshots/03-terminal-preview.png)
-
-## Приложенные файлы
-
-- [palette.json](contest/attachments/palette.json)
-- [contest-checklist.md](contest/attachments/contest-checklist.md)
-- [capture-showcase.sh](contest/scripts/capture-showcase.sh)
 
 ## Установка
 
